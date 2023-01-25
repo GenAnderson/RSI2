@@ -6,8 +6,7 @@
 html {
   font-size: 62.5%;
   font-family: Merriweather;
-  scroll-behavior: smooth;
-  overflow-x: hidden; }
+  scroll-behavior: smooth; }
 
 body {
   background-color: #fff;
@@ -30,7 +29,7 @@ h3 {
   margin: 2.4rem 0; }
 
 li {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   list-style: none; }
 
 .btn {
@@ -615,9 +614,13 @@ li {
   html {
     font-size: 50%; }
   body .container h1 {
-    font-size: 3.6rem; }
+    font-size: 3rem; }
   body .container .leadership-heading {
-    font-size: 3.6rem; }
+    font-size: 3rem; }
+  body .container .leader-description {
+    font-size: 1.4rem; }
+  body .container .leader-box-content img {
+    float: left; }
   body .container h2 {
     font-size: 3.6rem; }
   body .container .history-icon.next {
@@ -665,6 +668,9 @@ li {
     top: 1.6%; } }
 
 /* ///////////////NAVIGATION//////////////// */
+.overflowContainer {
+  overflow-x: hidden; }
+
 .menubtn {
   width: 4.5rem;
   height: 4.5rem;
@@ -698,25 +704,23 @@ nav {
   color: #dbebf3;
   width: 25rem;
   height: 100vh;
-  padding: 10rem 5rem 2.4rem 2.4rem;
-  transform: translateX(-132%);
-  top: 6rem;
-  right: -35rem;
+  padding: 2.4rem 5rem 2.4rem 2.4rem;
+  top: 7rem;
+  right: 0;
   transition: 1s ease-out;
-  position: absolute;
   text-align: left;
   cursor: default;
   overflow: scroll;
+  position: fixed;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  position: fixed;
+  align-content: space-between;
+  gap: 1rem;
   z-index: 101; }
-  .openMenu p {
-    font-size: 1.6rem; }
 
 .contact {
-  padding-top: 1rem; }
+  padding-top: 1rem;
+  font-size: 1.4rem; }
 
 .closeMenu {
   transform: translateX(100%); }
@@ -727,10 +731,6 @@ nav {
 
 .menuheader:first-child {
   padding-top: 0rem; }
-
-li {
-  list-style: none;
-  padding: 1rem 0rem; }
 
 .menulink:link,
 .menulink:visited {
