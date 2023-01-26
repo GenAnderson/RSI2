@@ -86,12 +86,12 @@ li {
 
 .project-body {
   background-color: aliceblue;
-  justify-items: center;
-  overflow-x: hidden; }
+  justify-items: center; }
 
 .background {
   position: relative;
-  overflow-y: clip; }
+  overflow-y: clip;
+  overflow-x: hidden; }
   .background::after {
     content: "";
     width: 800rem;
