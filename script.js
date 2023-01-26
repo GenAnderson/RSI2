@@ -8,10 +8,6 @@ menubtn.addEventListener("click", function () {
   openmenu.classList.toggle("closeMenu");
 });
 
-// openmenu.addEventListener("click", (e) => {
-//   e.preventDefault;
-// });
-
 ///////////// MENU SECTION - our founder & about us //////////////
 
 function founderonlytoggle() {
@@ -43,8 +39,6 @@ slideshowImages[currentImageCounter].style.opacity = 1;
 setInterval(nextImage, nextImageDelay);
 
 function nextImage() {
-  // slideshowImages[currentImageCounter].style.display = "none";
-  // slideshowImages[currentImageCounter].style.opacity = 0;
   slideshowImages[currentImageCounter].style.zIndex = -2;
   const tempCounter = currentImageCounter;
   setTimeout(() => {
@@ -52,7 +46,6 @@ function nextImage() {
   }, 1000);
 
   currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
-  // slideshowImages[currentImageCounter].style.display = "block";
   slideshowImages[currentImageCounter].style.opacity = 1;
   slideshowImages[currentImageCounter].style.zIndex = -1;
 }
@@ -82,19 +75,6 @@ if (window.location.href.split("#")[1] === "founder") {
   founderToggle.style.opacity = "100";
   aboutUsToggle.style.opacity = "0";
 }
-
-///////////// LEADER SECTION //////////////
-
-// const box = document.getElementsByClassName("leader-box-content");
-// const button = document.getElementsByClassName("leader-title");
-// const wholeBox = document.getElementsByClassName("leader-box");
-
-// for (let i = 0; i < button.length; i++) {
-//   button[i].addEventListener("click", function () {
-//     box[i].classList.toggle("hidden");
-//     wholeBox[i].classList.toggle("shadow");
-//   });
-// }
 
 ///////////// AWARDS SECTION //////////////
 // const awardsDes = document.querySelectorAll(".awards-description");

@@ -29,74 +29,82 @@
 
   <body>
     <div class="overflowContainer">
-    <nav>
-      <a href="#"><img src="logo.webp" alt="RSI Logo" class="logo" /></a>
-      <button class="menubtn">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class="menubtn"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke="currentColor"
-          stroke-width="2"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
-        </svg>
-      </button>
-    </nav>
+      <nav>
+        <a href="#"><img src="logo.webp" alt="RSI Logo" class="logo" /></a>
+        <button class="menubtn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="menubtn"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </nav>
 
-    <div class="openMenu closeMenu">
-      <ul class="aboutus">
-        <div class="gallery">
-          <a class="menulink menuheader rsinav" href="#">RSI</a>
-        </div>
-        <li><a class="menulink aboutlink" href="#about">–About</a></li>
-        <li>
-          <a class="menulink founderlink" href="#founder">–Our Founder</a>
-        </li>
-      </ul>
-      <div class="leadership">
-        <a class="menulink menuheader" href="index.html#leadership"
-          >Leadership</a
-        >
-      </div>
-      <div class="awards">
-        <a class="menulink menuheader" href="#awards">Awards</a>
-      </div>
-      <div class="gallery">
-        <a class="menulink menuheader" href="#gallery">Gallery</a>
-      </div>
-      <ul class="projects">
-        <a class="menulink menuheader" href="projects.html">Projects</a>
-        <!-- <li><a class="menulink" href="#">Schools</a></li>
-        <li><a class="menulink" href="#">Commercial</a></li>
-        <li><a class="menulink" href="#">Specialty Construction</a></li>
-        <li><a class="menulink" href="#">Affordable Housing</a></li> -->
-        <!-- <li><a class="menulink" href="#">Healthcare</a></li> -->
-        <!-- <li><a class="menulink" href="#">Renovations</a></li> -->
-      </ul>
-      <div class="contact">
-        <!-- <a class="menulink menuheader" href="#">Contact</a> -->
-        <p class="menuheader">Contact:</p>
-        <p class="contact-text">
- 
-          500 Alakawa Street<br />
-          Honolulu, HI 96817<br />
-          P: 808-839-9002<br />
-          F: 808-833-5971<br />
-          <div class="email-form"> 
-            <form method = "POST" name="myemailform" action="https://formsubmit.co/genchung1@outlook.com">
-              Email us:
-            <input type = "text" name="name" placeholder="Your name" required>
-             <br/><input type = "text" name="email" placeholder="Your email" required>
-             <br/> <textarea name="message" placeholder="Write your message here!"></textarea><br/>
-              <button type="submit" name ="submit">Send mail</button>
-            </form>
+      <div class="openMenu closeMenu">
+        <ul class="aboutus">
+          <div class="gallery">
+            <a class="menulink menuheader rsinav" href="#">RSI</a>
           </div>
+          <li><a class="menulink aboutlink" href="#about">–About</a></li>
+          <li>
+            <a class="menulink founderlink" href="#founder">–Our Founder</a>
+          </li>
+        </ul>
+        <div class="leadership">
+          <a class="menulink menuheader" href="index.html#leadership"
+            >Leadership</a
+          >
+        </div>
+        <div class="awards">
+          <a class="menulink menuheader" href="#awards">Awards</a>
+        </div>
+        <div class="gallery">
+          <a class="menulink menuheader" href="#gallery">Gallery</a>
+        </div>
+        <ul class="projects">
+          <a class="menulink menuheader" href="projects.html">Projects</a>
+        </ul>
+        <div class="contact">
+          <p class="menuheader">Contact:</p>
+          <p class="contact-text">
+            500 Alakawa Street<br />
+            Honolulu, HI 96817<br />
+            P: 808-839-9002<br />
+            F: 808-833-5971<br />
+          </p>
+          <form id="myForm" class="email-form">
+            <input
+              required
+              class="formName"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              required
+              class="formEmail"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <textarea
+              class="formMsg"
+              name="message"
+              placeholder="Type your message here"
+            ></textarea>
+            <button type="submit" name="submit" class="submitContact">
+              Submit
+            </button>
+          </form>
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.7681408307935!2d-157.87479448409175!3d21.320176083139415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006efed48f4465%3A0xe5e76968ddaaea0b!2sRalph%20S%20Inouye%20Co%20Ltd!5e0!3m2!1sen!2sus!4v1660787014796!5m2!1sen!2sus"
             width="600"
@@ -108,10 +116,9 @@
             referrerpolicy="no-referrer-when-downgrade"
             class="map"
           ></iframe>
-        </p>
+        </div>
       </div>
     </div>
-  </div>
 
     <header class="intro">
       <div class="fixed">
@@ -280,9 +287,9 @@
         <div class="leader-box lance">
           <div class="leader-box-content">
             <div class="leader-title">Lance Inouye, President & CEO</div>
-            <img src="leadership/leader1.png" alt="Lance Inouye" />
-            <div class="leader-description">
-              <p>
+            <div class="leader-float-box">
+              <img src="leadership/leader1.png" alt="Lance Inouye" />
+              <p class="leader-description">
                 Following his father's founding of Ralph S. Inouye in 1962,
                 Lance joined the company in 1981 as an estimator. He then worked
                 as RSI's chief estimator and vice president before becoming
@@ -309,9 +316,9 @@
             <div class="leader-title">
               Blake Inouye, Vice President of Engineering
             </div>
-            <img src="leadership/leader2.png" alt="Blake Inouye" />
-            <div class="leader-description">
-              <p>
+            <div class="leader-float-box">
+              <img src="leadership/leader2.png" alt="Blake Inouye" />
+              <p class="leader-description">
                 Blake joined Ralph S. Inouye in 2016 as a project manager before
                 becoming vice president of engineering in 2018. Prior to working
                 at RSI, Blake gained experience in structural engineering while
@@ -336,9 +343,9 @@
             <div class="leader-title">
               Mike Inouye, Vice President of Pre-Construction Services
             </div>
-            <img src="leadership/leader3.png" alt="Mike Inouye" />
-            <div class="leader-description">
-              <p>
+            <div class="leader-float-box">
+              <img src="leadership/leader3.png" alt="Mike Inouye" />
+              <p class="leader-description">
                 Mike joined Ralph S. Inouye in 1999 as a project engineer before
                 becoming vice president of pre-construction services in 2010.
                 Prior to working at RSI, Mike worked as a civil engineer as
@@ -364,9 +371,9 @@
             <div class="leader-title">
               Wesley Mikuni, Vice President & Chief Financial Officer
             </div>
-            <img src="leadership/leader4.png" alt="Wesley Mikuni" />
-            <div class="leader-description">
-              <p>
+            <div class="leader-float-box">
+              <img src="leadership/leader4.png" alt="Wesley Mikuni" />
+              <p class="leader-description">
                 Wesley joined Ralph S. Inouye in 2001 and has over twenty-five
                 years of accounting and financial management experience. Prior
                 to joining RSI, he worked as a senior auditor for Price
@@ -387,9 +394,9 @@
             <div class="leader-title">
               Mark Tagami, Vice President & Chief Operating Officer
             </div>
-            <img src="leadership/leader5.png" alt="Mark Tagami" />
-            <div class="leader-description">
-              <p>
+            <div class="leader-float-box">
+              <img src="leadership/leader5.png" alt="Mark Tagami" />
+              <p class="leader-description">
                 Mark joined Ralph S. Inouye in 2007 as a project manager before
                 becoming vice president of field operations and chief operating
                 officer in 2014. Prior to working at RSI, Mark worked for Kim &
@@ -416,90 +423,113 @@
 
       <h2 class="awards-heading" id="awards">Awards</h2>
       <section class="section-awards" id="awards">
-            <p class="awards-description">
-              2020 Build Hawaii Award<br />
-              First Hawaiian Bank - Manoa Branch
-            </p>
-            <p class="awards-description">
-              2020 Build Hawaii Award<br />
-              Hauula Fire Station Replacement
-            </p>
-            <p class="awards-description">
-              2020 Build Hawaii Award<br />
-              Shangri La Playhouse
-            </p>
-            <p class="awards-description">
-              2019 Build Hawaii Award<br />
-              Kapolei Consolidated Corp Yard Phase 3
-            </p>
-            <p class="awards-description">
-              2019 Build Hawaii Award<br />
-              No. 1 Capitol Reroof & Repair
-            </p>
-        <div class="excellence fhbbox"><img
-          src="awards/gal1.png"
-          alt="First Hawaiian Bank"
-          class="awards-front "
-          id="fhb"
+        <p class="awards-description">
+          2020 Build Hawaii Award<br />
+          First Hawaiian Bank - Manoa Branch
+        </p>
+        <p class="awards-description">
+          2020 Build Hawaii Award<br />
+          Hauula Fire Station Replacement
+        </p>
+        <p class="awards-description">
+          2020 Build Hawaii Award<br />
+          Shangri La Playhouse
+        </p>
+        <p class="awards-description">
+          2019 Build Hawaii Award<br />
+          Kapolei Consolidated Corp Yard Phase 3
+        </p>
+        <p class="awards-description">
+          2019 Build Hawaii Award<br />
+          No. 1 Capitol Reroof & Repair
+        </p>
+        <div class="excellence fhbbox">
+          <img
+            src="awards/gal1.png"
+            alt="First Hawaiian Bank"
+            class="awards-front"
+            id="fhb"
+          />
+          <div class="excellence__text">Award of Excellence</div>
+        </div>
+        <img
+          src="awards/gal2.png"
+          alt="Hauula fire station"
+          class="awards-front"
+          id="hauula"
         />
-        <div class="excellence__text">Award of Excellence</div>
-      </div>
-      <img
-        src="awards/gal2.png"
-        alt="Hauula fire station"
-        class="awards-front "
-        id="hauula"
-      />
-      <div class="excellence shangribox"><img
-        src="awards/gal3.png"
-        alt="ShangriLa project"
-        class="awards-front"
-        id="shangri"
-      /><div class="excellence__text">Award of Excellence</div>
-    </div>
-      <img
-        src="awards/gal4.png"
-        alt="Kapolei courtyard"
-        class="awards-front"
-        id="kapolei"
-      />
-      <img src="awards/gal5.png" alt="No.1 capitol" class="awards-front" id="capitol" />
-            <p class="awards-description">
-              2018 Build Hawaii Award<br />
-              1506 Piikoi Street
-            </p>
-            <p class="awards-description">
-              2018 Build Hawaii Award<br />
-              Pacific Buddhist Academy Weinberg Building
-            </p>
-            <p class="awards-description">
-              2016 Build Hawaii Award<br />
-              Honolulu FCU New Branch & Administrative-Support Office
-            </p>
-            <p class="awards-description">
-              2016 Build Hawaii Award<br />
-              Damien Memorial School New Athletic Building
-            </p>
-            <p class="awards-description">
-              2015 Build Hawaii Award<br />
-              Windward Com. College<br />
-              Hale La'akea & No'eau Renovation
-            </p>
-          <img src="awards/gal6.png" alt="1506 Piikoi" class="awards-front" id="piikoi"/>
-          <img src="awards/gal7.png" alt="PBA Academy" class="awards-front" id="pba"/>
+        <div class="excellence shangribox">
           <img
-            src="awards/gal8.png"
-            alt="Hon Federal CU"
+            src="awards/gal3.png"
+            alt="ShangriLa project"
             class="awards-front"
-            id="hfcu"
+            id="shangri"
           />
-          <img
-            src="awards/gal9.png"
-            alt="Damien Mem. School"
-            class="awards-front"
-            id="damien"
-          />
-          <img src="awards/gal10.png" alt="Windward" class="awards-front" id="windward" />
+          <div class="excellence__text">Award of Excellence</div>
+        </div>
+        <img
+          src="awards/gal4.png"
+          alt="Kapolei courtyard"
+          class="awards-front"
+          id="kapolei"
+        />
+        <img
+          src="awards/gal5.png"
+          alt="No.1 capitol"
+          class="awards-front"
+          id="capitol"
+        />
+        <p class="awards-description">
+          2018 Build Hawaii Award<br />
+          1506 Piikoi Street
+        </p>
+        <p class="awards-description">
+          2018 Build Hawaii Award<br />
+          Pacific Buddhist Academy Weinberg Building
+        </p>
+        <p class="awards-description">
+          2016 Build Hawaii Award<br />
+          Honolulu FCU New Branch & Administrative-Support Office
+        </p>
+        <p class="awards-description">
+          2016 Build Hawaii Award<br />
+          Damien Memorial School New Athletic Building
+        </p>
+        <p class="awards-description">
+          2015 Build Hawaii Award<br />
+          Windward Com. College<br />
+          Hale La'akea & No'eau Renovation
+        </p>
+        <img
+          src="awards/gal6.png"
+          alt="1506 Piikoi"
+          class="awards-front"
+          id="piikoi"
+        />
+        <img
+          src="awards/gal7.png"
+          alt="PBA Academy"
+          class="awards-front"
+          id="pba"
+        />
+        <img
+          src="awards/gal8.png"
+          alt="Hon Federal CU"
+          class="awards-front"
+          id="hfcu"
+        />
+        <img
+          src="awards/gal9.png"
+          alt="Damien Mem. School"
+          class="awards-front"
+          id="damien"
+        />
+        <img
+          src="awards/gal10.png"
+          alt="Windward"
+          class="awards-front"
+          id="windward"
+        />
       </section>
 
       <!-- -----------------GALLERY------------------- -->
@@ -511,7 +541,6 @@
               src="gallery/gal-1.jpg"
               alt="gal1"
               class="section-gallery__img"
-          
             />
           </figure>
           <figure class="section-gallery__item__2">
@@ -519,7 +548,6 @@
               src="gallery/gal-2.jpg"
               alt="gal2"
               class="section-gallery__img"
-        
             />
           </figure>
           <figure class="section-gallery__item__3">
@@ -527,7 +555,6 @@
               src="gallery/gal-3.jpg"
               alt="gal3"
               class="section-gallery__img"
-             
             />
           </figure>
           <figure class="section-gallery__item__4">
@@ -535,7 +562,6 @@
               src="gallery/gal-4.jpg"
               alt="gal4"
               class="section-gallery__img"
-        
             />
           </figure>
           <figure class="section-gallery__item__5">
@@ -543,7 +569,6 @@
               src="gallery/gal-5.jpg"
               alt="gal-5"
               class="section-gallery__img"
-          
             />
           </figure>
           <figure class="section-gallery__item__6">
@@ -551,7 +576,6 @@
               src="gallery/gal-6.jpg"
               alt="gal-6"
               class="section-gallery__img"
-          
             />
           </figure>
           <figure class="section-gallery__item__7">
@@ -580,7 +604,6 @@
               src="gallery/gal-10.jpg"
               alt="gal-10"
               class="section-gallery__img"
-
             />
           </figure>
           <figure class="section-gallery__item__11">
@@ -616,8 +639,8 @@
               src="gallery/gal-15.jpg"
               alt="gal-15"
               class="section-gallery__img"
-              width = 2320px
-              height = 591px
+              width="2320px"
+              height="591px"
             />
           </figure>
           <figure class="section-gallery__item__18">
@@ -676,5 +699,44 @@
       </section>
     </div>
     <script src="script.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+
+    <!------- EmailJS script ------->
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("f7ubLR15pkBC2Sece");
+      })();
+    </script>
+
+    <script>
+      document
+        .getElementById("myForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const serviceID = "service_7odam6k";
+          const templateID = "template_f64gxgs";
+
+          emailjs.sendForm(serviceID, templateID, this).then(
+            (response) => {
+              console.log("SUCCESS!", response.status, response.text);
+              // alert("Email sent. Thank you!");
+            },
+            (error) => {
+              console.log("FAILED...", error);
+              // alert("Failed to send.  Please try again later.", error);
+            }
+          );
+          resetFields();
+        });
+      function resetFields() {
+        document.getElementById("myForm")[0].value = "";
+        document.getElementById("myForm")[1].value = "";
+        document.getElementById("myForm")[2].value = "Message sent, thank you!";
+      }
+    </script>
   </body>
 </html>

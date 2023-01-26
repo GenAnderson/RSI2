@@ -1,22 +1,7 @@
-// Below 912px HEIGHT ONLY TO FIX NAV! //
-@media (max-height: 57em) {
-  body {
-    .openMenu {
-      .menuheader {
-        font-size: 2rem;
-      }
-    }
-  }
-}
-
 // Below 640px HEIGHT ONLY TO FIX NAV! //
 @media (max-height: 45em) {
   body {
     .openMenu {
-      padding-top: 20rem;
-      .contact {
-        padding-top: 1rem;
-      }
       .email-form {
         input {
           height: 2rem;
@@ -25,15 +10,6 @@
           height: 6rem;
         }
       }
-    }
-  }
-}
-
-// Below 560px HEIGHT ONLY TO FIX NAV! //
-@media (max-height: 35em) {
-  body {
-    .openMenu {
-      padding-top: 35rem;
     }
   }
 }
@@ -58,13 +34,10 @@
     font-size: 55%;
   }
   .openMenu {
-    // overflow-y: scroll;
-    padding-top: 2rem;
     .menuheader {
       font-size: 2rem;
     }
     li {
-      padding: 0.5rem;
       font-size: 1.4rem;
     }
   }
@@ -404,11 +377,7 @@
     .leader-description {
       font-size: 1.4rem;
     }
-    .leader-box-content {
-      img {
-        float: left;
-      }
-    }
+
     h2 {
       font-size: 3.6rem;
     }
@@ -422,16 +391,12 @@
         top: 1.8%;
       }
     }
-    .openMenu {
-      .rsi {
-        padding-top: 2.5rem;
-      }
-    }
+
     .leader-box-content {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto 1fr;
-      gap: 0.2rem;
+      // display: grid;
+      // grid-template-columns: 1fr;
+      // grid-template-rows: auto auto 1fr;
+      // gap: 0.2rem;
       img {
         width: 10rem;
       }
