@@ -87,7 +87,7 @@ li {
 .project-body {
   background-color: aliceblue;
   justify-items: center;
-  overflow: hidden; }
+  overflow-x: hidden; }
 
 .background {
   position: relative;
@@ -166,15 +166,15 @@ li {
       .box__side-front:hover {
         cursor: pointer; }
     .box__side-back {
-      background-color: #03033d;
       transform: rotateY(180deg);
       width: 100%;
       height: 100%;
       position: absolute;
       top: 0;
       right: 0;
-      border: solid 0.2rem black;
-      box-shadow: 0.5rem 0.5rem 0.5rem #444;
+      border: solid 0.2rem #03033d;
+      box-shadow: 0.5rem 0.7rem 0.9rem #03033d;
+      background: linear-gradient(to bottom left, #2d4d77, aliceblue);
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
@@ -185,8 +185,10 @@ li {
         color: #03033d;
         padding: 1rem 1rem;
         width: 100%;
-        background-color: aliceblue; }
+        background-color: aliceblue;
+        box-shadow: 0.2rem 0.2rem 0.8rem 0.1rem #03033d; }
       .box__side-back button {
+        font-family: inherit;
         background-color: aliceblue;
         width: max-content;
         height: max-content;
@@ -194,7 +196,7 @@ li {
         font-weight: bold;
         padding: 0.8rem;
         text-align: center;
-        box-shadow: 0.2rem 0.2rem 0.5rem 0.2rem black;
+        box-shadow: 0.2rem 0.2rem 0.8rem 0.1rem #03033d;
         transition: 1s ease;
         border-radius: 1rem; }
         .box__side-back button:hover {

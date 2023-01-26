@@ -8,20 +8,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-    href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Rubik:wght@400;500;700&display=swap"
-    rel="stylesheet"
-  />
-
+      href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Rubik:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
     <link rel="stylesheet" href="/css/style.css" />
-
 
     <title>RSI - Projects</title>
   </head>
   <body class="project-body">
     <div class="background">
       <nav>
-        <a href="index.html"><img src="logo.webp" alt="RSI Logo" class="logo" /></a>
+        <a href="index.html"
+          ><img src="logo.webp" alt="RSI Logo" class="logo"
+        /></a>
         <button class="menubtn">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +37,6 @@
               d="M4 6h16M4 12h16M4 18h16"
             />
           </svg>
-          
         </button>
       </nav>
 
@@ -46,9 +45,13 @@
           <div class="rsi">
             <a class="menulink menuheader" href="index.html">RSI</a>
           </div>
-          <li><a class="menulink aboutlink" href="#about">About</a></li>
           <li>
-            <a class="menulink founderlink" href="#founder">Our Founder</a>
+            <a class="menulink aboutlink" href="index.html#about">About</a>
+          </li>
+          <li>
+            <a class="menulink founderlink" href="index.html#founder"
+              >Our Founder</a
+            >
           </li>
         </ul>
         <div class="leadership">
@@ -57,10 +60,10 @@
           >
         </div>
         <div class="awards">
-          <a class="menulink menuheader" href="#awards">Awards</a>
+          <a class="menulink menuheader" href="index.html#awards">Awards</a>
         </div>
         <div class="gallery">
-          <a class="menulink menuheader" href="#gallery">Gallery</a>
+          <a class="menulink menuheader" href="index.html#gallery">Gallery</a>
         </div>
         <ul class="projects">
           <a class="menulink menuheader" href="projects.html">Projects</a>
@@ -72,7 +75,6 @@
           <!-- <li><a class="menulink" href="#">Renovations</a></li> -->
         </ul>
         <div class="contact">
-          <!-- <a class="menulink menuheader" href="#">Contact</a> -->
           <p class="menuheader">Contact</p>
           <p class="contact-text">
             Ralph S. Inouye Co., Ltd.<br />
@@ -80,27 +82,42 @@
             Honolulu, HI 96817<br />
             P: 808-839-9002<br />
             F: 808-833-5971<br />
-            <div class="email-form"> 
-              <form method = "POST" name="myemailform" action="https://formsubmit.co/genchung1@outlook.com">
-                Email us:
-              <input type = "text" name="name" placeholder="Your name" required>
-               <br/><input type = "text" name="email" placeholder="Your email" required>
-               <br/> <textarea name="message" placeholder="Write your message here!"></textarea><br/>
-                <button type="submit" name ="submit">Send mail</button>
-              </form>
-            </div>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.7681408307935!2d-157.87479448409175!3d21.320176083139415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006efed48f4465%3A0xe5e76968ddaaea0b!2sRalph%20S%20Inouye%20Co%20Ltd!5e0!3m2!1sen!2sus!4v1660787014796!5m2!1sen!2sus"
-              width="600"
-              title="google-map"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              class="map"
-            ></iframe>
           </p>
+          <form id="myForm" class="email-form">
+            <input
+              required
+              class="formName"
+              type="text"
+              name="name"
+              placeholder="Name"
+            />
+            <input
+              required
+              class="formEmail"
+              type="email"
+              name="email"
+              placeholder="Email"
+            />
+            <textarea
+              class="formMsg"
+              name="message"
+              placeholder="Type your message here"
+            ></textarea>
+            <button type="submit" name="submit" class="submitContact">
+              Submit
+            </button>
+          </form>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3716.7681408307935!2d-157.87479448409175!3d21.320176083139415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c006efed48f4465%3A0xe5e76968ddaaea0b!2sRalph%20S%20Inouye%20Co%20Ltd!5e0!3m2!1sen!2sus!4v1660787014796!5m2!1sen!2sus"
+            width="600"
+            title="google-map"
+            height="450"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            class="map"
+          ></iframe>
         </div>
       </div>
 
