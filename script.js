@@ -76,6 +76,26 @@ if (window.location.href.split("#")[1] === "founder") {
   aboutUsToggle.style.opacity = "0";
 }
 
+///////////// LEADERSHIP SECTION //////////////
+const allLeaderBoxes = document.querySelectorAll(".leader-box");
+
+allLeaderBoxes.forEach(function (box) {
+  box.classList.add("hidden");
+});
+
+const obsCallback = function (entries) {
+  const [entry] = entries;
+  if (entry.isIntersecting) entry.target.classList.remove("hidden");
+};
+
+const obsOptions = {
+  root: null,
+  threshold: [0],
+};
+
+const leaderSectionObserver = new IntersectionObserver(obsCallback, obsOptions);
+allLeaderBoxes.forEach((box) => leaderSectionObserver.observe(box));
+
 ///////////// AWARDS SECTION //////////////
 // const awardsDes = document.querySelectorAll(".awards-description");
 
