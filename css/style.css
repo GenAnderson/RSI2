@@ -982,13 +982,15 @@ form textarea {
   gap: 1rem;
   padding: 2rem;
   box-shadow: 0.3rem 0.3rem 0.5rem #4b4b52;
-  border: #35353d 0.2rem solid; }
+  border: #35353d 0.2rem solid;
+  overflow: hidden; }
   .awards-card img {
     max-height: 30rem;
     width: 100%;
     object-fit: cover; }
 
 .awards-description {
+  font-size: 1.8rem;
   color: #dbebf3;
   background-color: #4b4b52;
   padding: 0.5rem;
@@ -996,14 +998,17 @@ form textarea {
   height: 100%; }
 
 .excellence {
-  position: relative; }
+  position: relative;
+  font-weight: bold; }
   .excellence__text {
     position: absolute;
     top: 0;
-    background-color: rgba(228, 245, 131, 0.562);
+    left: 0;
+    background-color: rgba(248, 228, 46, 0.685);
     text-align: center;
     font-size: 1.2rem;
-    padding: 0.2rem; }
+    padding: 0.5rem 8rem;
+    transform: rotate(-45deg) translate(-30%, -75%); }
 
 /* ///////////////GALLERY//////////////// */
 .gallery-heading {

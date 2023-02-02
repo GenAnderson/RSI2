@@ -415,6 +415,8 @@ form {
   border: rgb(53, 53, 61) 0.2rem solid;
   // background-color: rgb(8, 64, 136);
 
+  overflow: hidden;
+
   img {
     max-height: 30rem;
     width: 100%;
@@ -423,6 +425,7 @@ form {
 }
 
 .awards-description {
+  font-size: 1.8rem;
   color: rgb(219, 235, 243);
   background-color: rgb(75, 75, 82);
   padding: 0.5rem;
@@ -431,14 +434,17 @@ form {
 }
 .excellence {
   position: relative;
+  font-weight: bold;
   &__text {
     position: absolute;
     top: 0;
-
-    background-color: rgba(228, 245, 131, 0.562);
+    left: 0;
+    background-color: rgba(248, 228, 46, 0.685);
     text-align: center;
     font-size: 1.2rem;
-    padding: 0.2rem;
+    padding: 0.5rem 8rem;
+
+    transform: rotate(-45deg) translate(-30%, -75%);
   }
 }
 
