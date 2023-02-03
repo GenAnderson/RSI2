@@ -96,15 +96,6 @@ const obsOptions = {
 const leaderSectionObserver = new IntersectionObserver(obsCallback, obsOptions);
 allLeaderBoxes.forEach((box) => leaderSectionObserver.observe(box));
 
-///////////// AWARDS SECTION //////////////
-// const awardsDes = document.querySelectorAll(".awards-description");
-
-// awardsDes.forEach((des) =>
-//   des.addEventListener("click", function () {
-//     des.style.opacity = des.style.opacity === "0" || "" ? "100" : "0";
-//   })
-// );
-
 /////////// GALLERY SECTION //////////////
 // Display selected photo//
 const galimg = document.querySelectorAll(".section-gallery__img");

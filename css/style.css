@@ -615,6 +615,8 @@ li {
   body .container .history-icon.previous {
     left: 4%;
     top: 1.8%; }
+  body .container .founder {
+    padding-top: 7rem; }
   body .container .leader-box-content img {
     width: 10rem; }
   body .container .leader-box-content p {
@@ -777,9 +779,7 @@ form textarea {
   z-index: 100;
   background-color: #fff;
   /* display: block; */
-  position: relative;
-  align-content: center;
-  justify-items: center; }
+  position: relative; }
 
 .section-history {
   max-width: 170rem;
@@ -889,13 +889,18 @@ form textarea {
   font-size: 6.4rem;
   text-align: center; }
 
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
 .section-leadership {
   max-width: 90%;
   display: grid;
   grid-template-rows: repeat(5, auto);
   align-self: center;
   justify-content: center;
-  margin: auto;
   gap: 1rem; }
 
 .leader-title {
@@ -931,14 +936,20 @@ form textarea {
   100% {
     transform: translateX(0%); } }
 
-.leader-box {
-  border-radius: 1rem;
-  transition: ease-in 1s;
-  transform: translateX(0); }
-
 .hidden {
   opacity: 0;
   transform: translateX(-20%); }
+
+.leader-box {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1rem 2rem #6d687a;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  transition: ease-in 1s;
+  transform: translateX(0); }
 
 .leader-box-content {
   display: grid;
@@ -951,14 +962,6 @@ form textarea {
 .leader-box-content p {
   padding: 2.4rem;
   grid-column: 2/3; }
-
-.leader-box {
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1rem 2rem #6d687a;
-  margin-bottom: 1rem; }
 
 /* ///////////////AWARDS//////////////// */
 .awards-heading {
@@ -998,9 +1001,9 @@ form textarea {
   height: 100%; }
 
 .excellence {
-  position: relative;
-  font-weight: bold; }
+  position: relative; }
   .excellence__text {
+    font-weight: bold;
     position: absolute;
     top: 0;
     left: 0;

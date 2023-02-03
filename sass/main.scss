@@ -171,8 +171,9 @@ form {
   background-color: #fff;
   /* display: block; */
   position: relative;
-  align-content: center;
-  justify-items: center;
+
+  // align-content: center;
+  // justify-items: center;
 }
 
 .section-history {
@@ -301,8 +302,13 @@ form {
   padding-bottom: 3.6rem;
   font-size: 6.4rem;
   text-align: center;
-  // text-transform: uppercase;
-  // letter-spacing: 1rem;
+}
+
+.centered-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .section-leadership {
@@ -311,7 +317,6 @@ form {
   grid-template-rows: repeat(5, auto);
   align-self: center;
   justify-content: center;
-  margin: auto;
   gap: 1rem;
 }
 
@@ -354,17 +359,23 @@ form {
   }
 }
 
-.leader-box {
-  border-radius: 1rem;
-  transition: ease-in 1s;
-  transform: translateX(0);
-}
-
 .hidden {
   opacity: 0;
   transform: translateX(-20%);
 }
 
+.leader-box {
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 1rem 2rem rgb(109, 104, 122);
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+
+  transition: ease-in 1s;
+  transform: translateX(0);
+}
 .leader-box-content {
   display: grid;
   grid-template-rows: auto auto;
@@ -377,15 +388,6 @@ form {
 .leader-box-content p {
   padding: 2.4rem;
   grid-column: 2/3;
-}
-
-.leader-box {
-  width: 100%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 1rem 2rem rgb(109, 104, 122);
-  margin-bottom: 1rem;
 }
 
 /* ///////////////AWARDS//////////////// */
@@ -434,8 +436,8 @@ form {
 }
 .excellence {
   position: relative;
-  font-weight: bold;
   &__text {
+    font-weight: bold;
     position: absolute;
     top: 0;
     left: 0;
