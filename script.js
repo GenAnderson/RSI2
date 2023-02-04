@@ -85,7 +85,8 @@ allLeaderBoxes.forEach(function (box) {
 
 const obsCallback = function (entries) {
   const [entry] = entries;
-  if (entry.isIntersecting) entry.target.classList.remove("hidden");
+  if (entry.isIntersecting)
+    entry.target.classList.remove("hidden").add("slide");
 };
 
 const obsOptions = {

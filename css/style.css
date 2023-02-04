@@ -747,9 +747,38 @@ form textarea {
     font-family: inherit;
     height: 10rem; }
   .email-form button {
+    color: #060564;
+    display: inline-block;
+    background-color: white;
     padding: 0.5rem;
     font-family: inherit;
-    font-weight: bold; }
+    font-weight: bold;
+    transition: all 0.1s;
+    position: relative;
+    margin-top: 0.5rem;
+    width: 100%; }
+  .email-form button:hover {
+    cursor: pointer;
+    transform: translateY(-0.3rem);
+    box-shadow: 0 10px 20px rgba(247, 246, 246, 0.2); }
+  .email-form button:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+  .email-form button:active {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 5px 10px rgba(247, 246, 246, 0.2); }
+  .email-form button::after {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    background-color: #fff;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s; }
 
 /* ///////////////HERO//////////////// */
 .intro {
@@ -926,19 +955,13 @@ form textarea {
   border-radius: 1rem;
   box-shadow: 0.2rem 0.3rem 0.5rem #151516; }
 
-.slideInFromLeft {
-  animation: 0.6s ease 0s 1 slideInLeft; }
-
-@keyframes slideInLeft {
-  0% {
-    transform: translateX(-50%);
-    opacity: 0; }
-  100% {
-    transform: translateX(0%); } }
-
 .hidden {
   opacity: 0;
-  transform: translateX(-20%); }
+  transform: translateX(-25%); }
+
+.slide {
+  transform: translate(0%);
+  transition: ease-in-out 1s; }
 
 .leader-box {
   width: 100%;
@@ -948,16 +971,14 @@ form textarea {
   box-shadow: 0 1rem 2rem #6d687a;
   margin-bottom: 1rem;
   border-radius: 1rem;
-  transition: ease-in 1s;
-  transform: translateX(0); }
+  transition: ease-in-out 1s; }
 
 .leader-box-content {
   display: grid;
   grid-template-rows: auto auto;
   justify-items: center;
   align-items: center;
-  width: 100%;
-  transition: 0.2s ease-in; }
+  width: 100%; }
 
 .leader-box-content p {
   padding: 2.4rem;
