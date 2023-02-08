@@ -70,6 +70,29 @@ function defaultMov() {
 next.addEventListener("click", defaultMov);
 previous.addEventListener("click", defaultMov);
 
+// Lazy load About us
+const imgTargets = document.querySelectorAll("img[data-src]");
+
+const loadImg = function (entries, observer) {
+  const [entry] = entries;
+
+  if (!entry.isIntersecting) return;
+
+  // Replace src with data-src
+  entry.target.src = entry.target.dataset.src;
+  entry.target.addEventListener("load", function () {
+    entry.target.classList.remove("lazy-img");
+  });
+
+  observer.unobserve(entry.target);
+};
+const imgObserver = new IntersectionObserver(loadImg, {
+  root: null,
+  threshold: 0,
+});
+
+imgTargets.forEach((img) => imgObserver.observe(img));
+
 /////////////HISTORY SECTION <= coming from PROJECTS SECTION //////////////
 if (window.location.href.split("#")[1] === "founder") {
   founderToggle.style.opacity = "100";
@@ -83,10 +106,14 @@ allLeaderBoxes.forEach(function (box) {
   box.classList.add("hidden");
 });
 
-const obsCallback = function (entries) {
+const obsCallback = function (entries, observer) {
   const [entry] = entries;
-  if (entry.isIntersecting)
-    entry.target.classList.remove("hidden").add("slide");
+
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove("hidden");
+  entry.target.classList.add("slide");
+  observer.unobserve(entry.target);
 };
 
 const obsOptions = {

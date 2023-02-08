@@ -201,9 +201,6 @@ form {
   background-color: #fff;
   /* display: block; */
   position: relative;
-
-  // align-content: center;
-  // justify-items: center;
 }
 
 .section-history {
@@ -237,6 +234,10 @@ form {
 
 .aboutPhoto {
   width: 100%;
+}
+
+.lazy-img {
+  filter: blur(20px);
 }
 
 .founder {
