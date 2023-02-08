@@ -7,6 +7,10 @@ $color-darkblue: rgb(3, 3, 61);
   height: 100%;
 }
 
+.lazy {
+  filter: blur(20px);
+}
+
 .grid-4col {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

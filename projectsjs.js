@@ -9,6 +9,13 @@ menubtn.addEventListener("click", function () {
 
 /////////////////////////////PROJECTS PAGE//////////////////////////////////
 
+// Lazy load main photos
+const projectImgTarget = document.querySelectorAll("img");
+
+window.addEventListener("load", function () {
+  projectImgTarget.forEach((img) => img.classList.remove("lazy"));
+});
+
 //////////////SCROLL UP SUB-HEADING START//////////
 const schoolSubHead = document.querySelector(".project__schools__sub-heading");
 const schoolSec = document.querySelector(".project__schools");
