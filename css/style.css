@@ -957,7 +957,7 @@ form textarea {
 .section-leadership img {
   float: left;
   width: 16rem;
-  margin: 1.2rem;
+  margin: 1.2rem 1.2rem 1rem 1.2rem;
   background-color: #35353d;
   border-radius: 1rem;
   box-shadow: 0.2rem 0.3rem 0.5rem #151516; }
@@ -988,7 +988,7 @@ form textarea {
   width: 100%; }
 
 .leader-box-content p {
-  padding: 2.4rem;
+  padding: 1.2rem;
   grid-column: 2/3; }
 
 /* ///////////////AWARDS//////////////// */
