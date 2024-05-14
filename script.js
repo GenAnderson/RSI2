@@ -1,146 +1,178 @@
 "use strict";
+///////////// ANIMATE CLASS //////////////
 
-///////////// MENU SECTION //////////////
-const menubtn = document.querySelector(".menubtn");
-const openmenu = document.querySelector(".openMenu");
+const allAnimate = document.querySelectorAll(".animate");
 
-menubtn.addEventListener("click", function () {
-  openmenu.classList.toggle("closeMenu");
-});
-
-///////////// MENU SECTION - our founder & about us //////////////
-
-function founderonlytoggle() {
-  founderToggle.style.opacity = "100";
-  aboutUsToggle.style.opacity = "0";
-}
-
-function aboutonlytoggle() {
-  founderToggle.style.opacity = "0";
-  aboutUsToggle.style.opacity = "100";
-}
-
-const founderlink = document.querySelector(".founderlink");
-founderlink.addEventListener("click", founderonlytoggle);
-
-const aboutlink = document.querySelector(".aboutlink");
-aboutlink.addEventListener("click", aboutonlytoggle);
-
-///////////// SLIDER/INTRO SECTION //////////////
-
-const slideshowImages = document.querySelectorAll(".intro .slideshow-img");
-
-const nextImageDelay = 3000;
-
-let currentImageCounter = 0;
-
-slideshowImages[currentImageCounter].style.opacity = 1;
-
-setInterval(nextImage, nextImageDelay);
-
-function nextImage() {
-  slideshowImages[currentImageCounter].style.zIndex = -2;
-  const tempCounter = currentImageCounter;
-  setTimeout(() => {
-    slideshowImages[tempCounter].style.opacity = 0;
-  }, 1000);
-
-  currentImageCounter = (currentImageCounter + 1) % slideshowImages.length;
-  slideshowImages[currentImageCounter].style.opacity = 1;
-  slideshowImages[currentImageCounter].style.zIndex = -1;
-}
-
-///////////// HISTORY SECTION //////////////
-
-const next = document.querySelector(".next");
-const previous = document.querySelector(".previous");
-const founderToggle = document.querySelector(".founder");
-const aboutUsToggle = document.querySelector(".about_us");
-
-function defaultMov() {
-  if (founderToggle.style.opacity == "0" || founderToggle.style.opacity == "") {
-    founderToggle.style.opacity = "100";
-    aboutUsToggle.style.opacity = "0";
-  } else {
-    founderToggle.style.opacity = "0";
-    aboutUsToggle.style.opacity = "100";
-  }
-}
-
-next.addEventListener("click", defaultMov);
-previous.addEventListener("click", defaultMov);
-
-// Lazy load About us
-const imgTargets = document.querySelectorAll("img[data-src]");
-
-const loadImg = function (entries, observer) {
-  const [entry] = entries;
-
-  if (!entry.isIntersecting) return;
-
-  // Replace src with data-src
-  entry.target.src = entry.target.dataset.src;
-
-  entry.target.addEventListener("load", function () {
-    entry.target.classList.remove("lazy-img");
+const animateCallback = function (entries, _) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.remove("zeroOpacity");
+      entry.target.classList.add("solid");
+    } else {
+      entry.target.classList.remove("solid");
+      entry.target.classList.add("zeroOpacity");
+    }
   });
-
-  observer.unobserve(entry.target);
 };
-const imgObserver = new IntersectionObserver(loadImg, {
+
+const animateOptions = {
   root: null,
-  threshold: 0,
+  threshold: [0.5],
+};
+
+const animateObserver = new IntersectionObserver(
+  animateCallback,
+  animateOptions
+);
+allAnimate.forEach((item) => animateObserver.observe(item));
+
+/////////// MAIN NAV OBSERVER //////////////
+
+// Intersects Founders to leaders
+
+const navBar = document.querySelectorAll(".nav-list-item");
+const founderSection = document.querySelector(".founderBG");
+
+const navCallback = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // If the top of the target element is at or above the top of the viewport
+      navBar.forEach((nav) => {
+        nav.classList.add("changeNav");
+      });
+    } else {
+      // If the top of the target element is below the top of the viewport
+      navBar.forEach((nav) => {
+        nav.classList.remove("changeNav");
+      });
+    }
+  });
+};
+
+const navOptions = {
+  root: null,
+  threshold: 0.9,
+};
+
+const navObserver = new IntersectionObserver(navCallback, navOptions);
+navObserver.observe(founderSection);
+
+// Intersects Projects
+
+const projectsSection = document.querySelector(".section-projects");
+
+const navCallback2 = function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      // If the top of the target element is at or above the top of the viewport
+      navBar.forEach((nav) => {
+        nav.classList.add("changeNavProjects");
+      });
+    } else {
+      // If the top of the target element is below the top of the viewport
+      navBar.forEach((nav) => {
+        nav.classList.remove("changeNavProjects");
+      });
+    }
+  });
+};
+
+const navProjectOptions = {
+  root: null,
+  threshold: 0.9,
+};
+
+const navObserver2 = new IntersectionObserver(navCallback2, navProjectOptions);
+navObserver2.observe(projectsSection);
+
+/////////////// PROJECTS SECTION SLIDER//////////////
+document.addEventListener("DOMContentLoaded", function () {
+  const scrollers = document.querySelectorAll(".image-scroller");
+
+  scrollers.forEach((scroller) => {
+    const images = scroller.querySelectorAll(".project-photo");
+    let currentIndex = 0;
+    const totalImages = images.length;
+
+    function showNextImage() {
+      images[currentIndex].classList.remove("active");
+      currentIndex = (currentIndex + 1) % totalImages;
+      images[currentIndex].classList.add("active");
+    }
+
+    // Initially show the first image
+    images[currentIndex].classList.add("active");
+
+    // Change image every 3 seconds (3000 milliseconds)
+    setInterval(showNextImage, 1800);
+  });
 });
 
-imgTargets.forEach((img) => imgObserver.observe(img));
+/////////////// PROJECTS SELECTION /////////////
 
-/////////////HISTORY SECTION <= coming from PROJECTS SECTION //////////////
-if (window.location.href.split("#")[1] === "founder") {
-  founderToggle.style.opacity = "100";
-  aboutUsToggle.style.opacity = "0";
+function addHideClassToHiddenElements() {
+  projHidden.forEach((hiddenElement) => {
+    hiddenElement.classList.add("hide");
+  });
 }
 
-///////////// LEADERSHIP SECTION //////////////
-const allLeaderBoxes = document.querySelectorAll(".leader-box");
-
-allLeaderBoxes.forEach(function (box) {
-  box.classList.add("hidden");
+// Add click event listener to document
+document.addEventListener("click", function (event) {
+  // Check if the clicked element is not a project image
+  if (!event.target.classList.contains("project-img")) {
+    // Add back the hide class to all hidden elements
+    addHideClassToHiddenElements();
+  }
 });
 
-const obsCallback = function (entries, observer) {
-  const [entry] = entries;
+const projHidden = document.querySelectorAll(".hidden");
+const imgSelection = document.querySelectorAll(".project-img");
 
-  if (!entry.isIntersecting) return;
+imgSelection.forEach((img, i) => {
+  img.addEventListener("click", function () {
+    const trimmedName = img.className.split(" ")[0];
 
-  entry.target.classList.remove("hidden");
-  entry.target.classList.add("slide");
-  observer.unobserve(entry.target);
-};
-
-const obsOptions = {
-  root: null,
-  threshold: [0],
-};
-
-const leaderSectionObserver = new IntersectionObserver(obsCallback, obsOptions);
-allLeaderBoxes.forEach((box) => leaderSectionObserver.observe(box));
-
-/////////// GALLERY SECTION //////////////
-// Display selected photo//
-const galimg = document.querySelectorAll(".section-gallery__img");
-const transHiddenGal = document.querySelector(".hideGal");
-let hiddenGalBox = document.querySelector(".galPhotoHidden");
-
-const galSection = document.querySelector(".section-gallery");
-
-galimg.forEach((gal, i) => {
-  return gal.addEventListener("click", function () {
-    hiddenGalBox.src = gal.src;
-
-    transHiddenGal.classList.remove("toggleIndex");
-
-    transHiddenGal.addEventListener("click", function () {
-      transHiddenGal.classList.add("toggleIndex");
+    projHidden.forEach((hiddenElement) => {
+      if (hiddenElement.classList.contains(trimmedName)) {
+        hiddenElement.classList.remove("hide");
+      }
     });
+  });
+});
+
+///////////// PROJECTS NAVIGATION /////////////
+const page = document.querySelectorAll(".page"); //Actual page
+const navCategory = document.querySelectorAll(".project-category"); //navLink
+
+navCategory.forEach((cat) => {
+  cat.addEventListener("click", function (current) {
+    // selectors
+    const selectedNav = current.target;
+    const previousCategoryNav = document.querySelector(".select");
+    const categoryName = cat.textContent.trim().split(" ")[0]; //take just first name because of affordable
+    const categoryClass = ".project-" + categoryName.toLowerCase();
+    const selectedCategoryPage = document.querySelector(categoryClass);
+
+    // Nav update (swap select class)
+    if (previousCategoryNav) {
+      previousCategoryNav.classList.remove("select");
+      selectedNav.classList.add("select");
+    }
+
+    page.forEach((find) => {
+      find.classList.remove("hide"); // Remove "hide" class from all pages first
+    });
+
+    // Add "hide" class only to pages that are not selected
+    page.forEach((find) => {
+      if (!find.classList.contains(selectedCategoryPage)) {
+        find.classList.add("hide");
+      }
+    });
+
+    //Page update (swap hide class)
+    if (selectedCategoryPage) {
+      selectedCategoryPage.classList.remove("hide");
+    }
   });
 });
