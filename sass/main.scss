@@ -1,6 +1,6 @@
 @import "general/general.scss";
 @import "general/projects";
-@import "general/mediaq";
+// @import "general/mediaq";
 
 /* ///////////////NAVIGATION//////////////// */
 
@@ -125,6 +125,14 @@ nav {
   background-color: #111d4a;
   color: #eee5e9;
   z-index: 1;
+}
+
+@media (max-width: 97em) {
+  .vmv {
+    max-width: 22rem;
+    min-width: 18rem;
+    max-height: 50rem;
+  }
 }
 
 .vmv:hover {
