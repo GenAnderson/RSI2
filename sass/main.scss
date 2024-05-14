@@ -160,7 +160,7 @@ nav {
     transform: translate(10%, -100%);
     width: 100%;
     text-align: left;
-    font-size: 10rem;
+    font-size: 8rem;
     color: white;
     text-transform: uppercase;
     z-index: 1;
@@ -178,6 +178,8 @@ nav {
   animation: introFadeOut linear forwards;
   animation-timeline: view();
   animation-range: exit;
+
+  overflow-x: hidden;
 }
 
 @keyframes introFadeOut {
@@ -460,12 +462,6 @@ figure {
   position: relative;
 }
 
-// .hidden-citron {
-//   width: 100vw;
-//   height: 100vh;
-//   background-color: #111d4a;
-// }
-
 /* ///////////////CONTACT//////////////// */
 
 .section-contact {
@@ -502,13 +498,13 @@ figure {
   input {
     font-family: inherit;
     height: 3.2rem;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     margin-top: 1rem;
     padding: 2rem 1rem;
   }
   textarea {
     font-family: inherit;
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     height: 20rem;
     width: 100%;
     margin-top: 1rem;
