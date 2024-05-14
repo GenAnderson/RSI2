@@ -21,9 +21,9 @@ nav {
 }
 
 .nav-list-item {
-  padding: 0.5rem 3rem;
-  border-bottom: #eee5e9 solid 0.5rem;
-  border-top: #eee5e9 solid 0.5rem;
+  padding: 0.5rem 1rem;
+  border-bottom: #eee5e9 solid 0.2rem;
+  border-top: #eee5e9 solid 0.2rem;
   border-radius: 1rem;
 }
 
@@ -41,110 +41,11 @@ nav {
 }
 
 .changeNavProjects {
-  background-color: #eee5e9;
-  color: #0c0f0a;
-  border-top: #0c0f0a solid 0.5rem;
-  border-bottom: #0c0f0a solid 0.5rem;
+  background-color: #0c0f0a;
+  color: #eee5e9;
+  border-top: #0c0f0a solid 0.2rem;
+  border-bottom: #0c0f0a solid 0.2rem;
 }
-
-// .contact {
-//   padding-top: 1rem;
-//   font-size: 1.4rem;
-// }
-
-// form {
-//   input {
-//     padding: 0.2rem;
-//     margin-bottom: 0.2rem;
-//     width: 100%;
-//   }
-//   textarea {
-//     padding: 0.2rem;
-//     width: 100%;
-//   }
-// }
-// .closeMenu {
-//   transform: translateX(100%);
-// }
-
-// .menuheader {
-//   font-size: 3.2rem;
-//   font-weight: bold;
-// }
-
-// .menuheader:first-child {
-//   padding-top: 0rem;
-// }
-
-// .menulink:link,
-// .menulink:visited {
-//   text-decoration: none;
-//   color: rgb(219, 235, 243);
-// }
-
-// .menulink:hover,
-// .menulink:active {
-//   text-decoration: none;
-//   color: rgb(162, 200, 233);
-// }
-
-// .map {
-//   height: auto;
-//   // width: auto;
-//   padding: 2.4rem 45rem 5rem 0;
-// }
-
-// .email-form {
-//   padding-top: 1rem;
-//   width: auto;
-//   input {
-//     height: 3rem;
-//     font-family: inherit;
-//   }
-//   textarea {
-//     font-family: inherit;
-//     height: 10rem;
-//   }
-
-//   button {
-//     color: rgb(6, 5, 100);
-//     display: inline-block;
-//     background-color: white;
-//     padding: 0.5rem;
-//     font-family: inherit;
-//     font-weight: bold;
-//     transition: all 0.1s;
-//     position: relative;
-//     margin-top: 0.5rem;
-//     width: 100%;
-//   }
-//   button:hover {
-//     cursor: pointer;
-//     transform: translateY(-0.3rem);
-//     box-shadow: 0 10px 20px rgba(247, 246, 246, 0.2);
-//   }
-//   button:hover::after {
-//     transform: scaleX(1.4) scaleY(1.6);
-//     opacity: 0;
-//   }
-//   button:active {
-//     transform: translateY(-0.1rem);
-//     box-shadow: 0 5px 10px rgba(247, 246, 246, 0.2);
-//   }
-//   button::after {
-//     content: "";
-//     position: absolute;
-//     display: inline-block;
-//     height: 100%;
-//     width: 100%;
-//     border-radius: 1rem;
-//     background-color: #fff;
-//     top: 0;
-//     left: 0;
-//     z-index: -1;
-//     transition: all 0.4s;
-//   }
-// }
 
 /* ///////////////HERO//////////////// */
 
@@ -160,7 +61,6 @@ nav {
     transform: translate(10%, -100%);
     width: 100%;
     text-align: left;
-    font-size: 8rem;
     color: white;
     text-transform: uppercase;
     z-index: 1;
@@ -212,8 +112,8 @@ nav {
 .vmv {
   display: flex;
   flex-direction: column;
-  min-width: 30rem;
-  max-width: 35rem;
+  min-width: 20rem;
+  max-width: 25rem;
   min-height: fit-content;
   max-height: 55rem;
   align-items: center;
@@ -230,11 +130,10 @@ nav {
 .vmv:hover {
   transform: translateY(-0.2rem);
   box-shadow: 0.2rem 1rem 2rem #eee5e9;
-  cursor: none;
 }
 
 .icon {
-  width: 10rem;
+  width: 5rem;
   background-color: #eee5e9;
   border-radius: 5%;
 }
@@ -267,7 +166,7 @@ nav {
   color: #0c0f0a;
 }
 .founder {
-  padding: 10rem;
+  padding: 5rem;
   transition: all 0.3s;
 }
 
@@ -280,28 +179,42 @@ nav {
   height: 100vh;
   width: 100vw;
   object-fit: cover;
-  z-index: -1;
   position: sticky;
   top: 0;
+  z-index: -1;
 }
 
 .section-leaders {
-  padding: 5rem 0rem 20rem 0rem;
-  margin: 0rem 40rem;
+  padding: 5rem 0rem 10rem 0rem;
+  margin: 0rem 20rem 20rem 20rem;
   background-color: #eee5e9e1;
   color: #0c0f0a;
-  border-radius: 5%;
+  border-radius: 5rem;
 }
 
 .container-leader {
   transition: 1s ease;
-  padding: 5rem 10rem;
+  padding: 2rem 5rem;
 }
 
 // /* ///////////////PROJECTS//////////////// */
+.projectsBG {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -1;
+  position: sticky;
+  top: 0;
 
+  filter: brightness(100%) grayscale(100%) contrast(30%);
+}
+
+.header-projects {
+  font-size: 5rem;
+  letter-spacing: 1rem;
+  margin-bottom: 50rem;
+}
 .section-projects {
-  margin-top: 40rem;
   display: flex;
   width: 100%;
   height: 100vh;
@@ -311,7 +224,8 @@ nav {
   position: sticky;
   top: 0;
 
-  margin-bottom: 60rem;
+  opacity: 0.8;
+  margin-bottom: 30rem;
 }
 
 .nav-projects {
@@ -336,15 +250,15 @@ nav {
 
 .project-category {
   padding: 0.5rem 3rem;
-  border-bottom: solid 0.5rem #0c0f0a;
-  border-top: solid 0.5rem #eee5e9;
+  border-bottom: solid 0.2rem #0c0f0a;
+  border-top: solid 0.2rem #eee5e9;
   color: #0c0f0a;
   border-radius: 1rem;
 }
 
 .project-category:hover {
   cursor: pointer;
-  border-top: solid 0.5rem #0c0f0a;
+  border-top: solid 0.2rem #0c0f0a;
   scale: 1.1;
   transition: 0.2s;
 }
@@ -419,7 +333,7 @@ figure {
 
 /* ///////////////PROJECT SELECTIONS//////////////// */
 .hidden {
-  width: calc(100% - 45rem);
+  width: calc(100% - 40rem);
   height: 100vh;
   padding: 10rem;
   background-color: #111d4afa;
@@ -435,7 +349,7 @@ figure {
   align-items: center;
 
   &__project-desc {
-    padding: 10rem;
+    padding: 5rem;
   }
 
   &__project-photo {
@@ -468,7 +382,7 @@ figure {
   background-color: #111d4a;
   display: flex;
   justify-content: space-evenly;
-  padding: 10rem;
+  padding: 5rem;
   height: 40vh;
   width: 100%;
 
@@ -497,24 +411,24 @@ figure {
 
   input {
     font-family: inherit;
-    height: 3.2rem;
-    font-size: 2.4rem;
+    height: 1.8rem;
+    font-size: 1.6rem;
     margin-top: 1rem;
-    padding: 2rem 1rem;
+    padding: 1.2rem 1rem;
   }
   textarea {
     font-family: inherit;
-    font-size: 2.4rem;
-    height: 20rem;
+    font-size: 1.8rem;
+    height: 10rem;
     width: 100%;
     margin-top: 1rem;
-    padding: 2rem 1rem;
+    padding: 1.2rem 1rem;
   }
   .submitContact {
     font-family: inherit;
-    margin-top: 2rem;
-    padding: 1rem;
-    font-size: 2.8rem;
+    margin-top: 1rem;
+    padding: 0.8rem;
+    font-size: 1.6rem;
     border-radius: 1rem;
     background-color: #696773;
     color: #eee5e9;
@@ -527,8 +441,8 @@ figure {
 }
 
 .map {
-  width: 100%;
-  padding: 0 10rem;
+  padding: 0rem 10rem;
+  height: 100%;
 }
 
 // /* ///////////////GALLERY//////////////// */
@@ -618,7 +532,7 @@ figure {
 .floatPhoto {
   float: left;
   margin: 1.2rem;
-  max-width: 25rem;
+  max-width: 15rem;
   box-shadow: 0.2rem 0.3rem 0.5rem #0c0f0a;
 }
 

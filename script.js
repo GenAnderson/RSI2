@@ -85,6 +85,28 @@ const navProjectOptions = {
 const navObserver2 = new IntersectionObserver(navCallback2, navProjectOptions);
 navObserver2.observe(projectsSection);
 
+/////////////// PROJECTS SECTION - REMOVE LEADERSHIP STICKY BG //////////////
+// const leadersBG = document.querySelector(".leadersBG");
+// const projectsBG = document.querySelector(".projectsBG");
+
+// const stickyCallback = function (entries, _) {
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       leadersBG.classList.remove("sticky");
+//     } else {
+//       leadersBG.classList.add("sticky");
+//     }
+//   });
+// };
+
+// const stickyOptions = {
+//   root: null,
+//   threshold: 0,
+// };
+
+// const stickyObserver = new IntersectionObserver(stickyCallback, stickyOptions);
+// stickyObserver.observe(projectsBG);
+
 /////////////// PROJECTS SECTION SLIDER//////////////
 document.addEventListener("DOMContentLoaded", function () {
   const scrollers = document.querySelectorAll(".image-scroller");
